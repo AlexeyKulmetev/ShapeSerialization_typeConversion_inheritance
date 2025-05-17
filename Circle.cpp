@@ -3,7 +3,7 @@
 #include <iostream>
 
 std::string Circle::toJson() const {
-	std::string result = "{\"type\":\"" + Constants::CIRCLE_NAME + "\"," + Constants::RADIUS + std::to_string(radius) + "}";
+	std::string result = "{\"type\":\"" + Constants::CIRCLE_NAME + "\"," + Constants::RADIUS + doubleWithoutExtraZeroes(radius) + "}";
 	return result;
 }
 void Circle::print() const {

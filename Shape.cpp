@@ -4,6 +4,15 @@
 #include "Rectangle.hpp"
 
 
+std::string Shape::doubleWithoutExtraZeroes(double d) const {
+	std::string result = std::to_string(d);
+	result.erase(result.find_last_not_of('0') + 1, std::string::npos);
+	if (result.back() == '.') {
+		result.pop_back();
+	}
+	return result;
+}
+
 Shape* Shape::fromJson(const std::string& _jsonStr) {
 	
 	if (_jsonStr.find(Constants::TYPE_CIRCLE) != std::string::npos) {

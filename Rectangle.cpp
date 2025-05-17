@@ -5,7 +5,7 @@
 
 std::string Rectangle::toJson() const {
 	std::string result = "{\"type\":\"" + Constants::RECTANGLE_NAME + "\"," + Constants::LENGTH +
-		std::to_string(length) + "\"," + Constants::WIDTH + std::to_string(width) + "}";
+		doubleWithoutExtraZeroes(length) + "\"," + Constants::WIDTH + doubleWithoutExtraZeroes(width) + "}";
 	return result;
 }
 

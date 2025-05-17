@@ -9,6 +9,8 @@ public:
 
 	virtual std::string toJson() const = 0;
 
+	std::string doubleWithoutExtraZeroes(double d) const;
+
 	// need static since Shape entity cant be instantiate
 	// constructors can`t be virtual
 	static Shape* fromJson(const std::string& _jsonStr);
